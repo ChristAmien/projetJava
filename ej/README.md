@@ -30,7 +30,7 @@ C’est une visibilité intermédiaire entre `default` et `public`.
 
 ---
 
-## public
+## <h1 style="color=#0A84FF">public</h1>
 La visibilité `public` rend les attributs et méthodes accessibles **partout**.
 
 - Accessible dans toutes les classes
@@ -38,7 +38,7 @@ La visibilité `public` rend les attributs et méthodes accessibles **partout**.
 
 ---
 
-## Astuce
+## <h1 style="color=#0A84FF">Astuce</h1>
 - `private` → accès limité à la classe
 - `default` → accès au package
 - `protected` → accès package + héritage
@@ -82,4 +82,21 @@ ce concept peut s'appliquer au niveau d'une classe ou d'une methode. Dans les de
 **=========au niveau de la classe==========**
 
 au niveau de classe une classe abstraite ne peut pas être instanciée. Cependant une classe abstraite est faite pour être héritée ! Il existe de nombreuses situations où l’on veut bloquer l’instanciation. Par exemple, imaginez 3 classes : Animal, Chien et Chat. Bien évidemment Chien et Chat sont deux classes filles de la classe Animal. Dans ce contexte, un Animal peut-il exister sans être un chien ou un chat ? Absolument pas, c’est un concept abstrait qui sert à regrouper deux éléments concrets Chien et Chat.
+
+
+## <h1 style="color=#0A84FF">====INVERSION DE DEPENDANCE====</h1>
+
+## Problematique de Couplage
+
+Commençons par définir ce qu’est le couplage. Prenons un exemple, dans une maison un évier ne fonctionne pas s’il n’est pas raccordé à l’arrivée d’eau. On peut dire que l’évier utilise l’arrivée d’eau ou bien qu’il dépend de l’arrivée d’eau.
+
+De la même façon, une classe peut utiliser une autre classe et elle dépendra donc de cette classe. Sans cette dernière, elle ne fonctionnerait pas. On dit alors que ces deux classes sont couplées car l’une a besoin de l’autre, ou encore car l’une dépend de l’autre.
+
+<p style="color=#0A84FF">PROBLEMATIQUE ?</p>
+
+si la classe qui est utilisé change alors cela pourrait avoir un impact sur la classe qui l'utilise. 
+
+<p style="color=#0A84FF">SOLUTION ?</p>
+
+Pour eviter cela l'idée est donc de `reduire le couplage` car moins il y a de dependances entre nos objets, mieux l'on se porte. Et s'il est évidemment impossible de supprimer toutes dependances, on peut diminuer leur impact.
 

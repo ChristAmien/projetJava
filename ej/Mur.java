@@ -4,8 +4,9 @@ public class Mur extends Bloc {
     private boolean porteur;
 
     public Mur(int longueur, int largeur, int hauteur, boolean porteur){
-        super(longueur,largeur,hauteur);
+        super(longueur, largeur, hauteur);
         this.porteur=porteur;
+        this.couleur = Couleur.GRIS;
     }
 
     public boolean estTraversable(){
@@ -14,5 +15,10 @@ public class Mur extends Bloc {
         }
         return true;
     }
+
+    public Couleur getCouleur(){
+        return Couleur.GRIS;
+    }
+
 
 }

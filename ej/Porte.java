@@ -7,6 +7,7 @@ public class Porte extends Bloc {
     public Porte (int longueur, int largeur, int hauteur, boolean verrouille){
         super(longueur, largeur, hauteur);
         this.verrouille = verrouille;
+        this.couleur = Couleur.BLEU;
     }
 
     public boolean estVerrouille(){
@@ -15,4 +16,5 @@ public class Porte extends Bloc {
         }
         return false;
     }
+
 }
