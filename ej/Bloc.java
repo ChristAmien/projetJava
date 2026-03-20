@@ -1,32 +1,37 @@
 package ej;
+
 // 
 public abstract class Bloc implements IBloc {
-    protected int longueur;
-    protected int largeur;
-    protected int hauteur;
-    protected Couleur couleur;
+   protected int longueur;
+   protected int largeur;
+   protected int hauteur;
+   protected Couleur couleur;
 
-    //Constructeur
-   public Bloc(int longueur,int largeur,int hauteur){ //ici lorsqu'on ajoute un nouvelélement en paramêtre cela n'a pas d'effet sur la classe Rempart uniquement sur les classes filles 
-    this.hauteur=hauteur;
-    this.largeur=largeur;
-    this.longueur=longueur;
+   // Constructeur
+   public Bloc(final int longueur, final int largeur,final  int hauteur) throws IllegalBlocException{
+
+      if (longueur < MIN_LONGUEUR || largeur < MIN_LARGEUR || hauteur < MIN_HAUTEUR) {
+         throw new IllegalBlocException();
+      }
+      this.hauteur = hauteur;
+      this.largeur = largeur;
+      this.longueur = longueur;
    }
 
-//    les accesseurs
-   public int getLongueur(){
-    return longueur;
+   // les accesseurs
+   public int getLongueur() {
+      return longueur;
    }
 
-   public int getLargeur(){
-    return largeur;
+   public int getLargeur() {
+      return largeur;
    }
 
-   public int getHauteur(){
-    return hauteur;
+   public int getHauteur() {
+      return hauteur;
    }
 
-   public void setCouleur(Couleur nouvelleCouleur){
+   public void setCouleur(Couleur nouvelleCouleur) {
       this.couleur = nouvelleCouleur;
    }
 

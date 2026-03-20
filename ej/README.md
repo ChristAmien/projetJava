@@ -107,3 +107,17 @@ La généricité nous permet d’éviter la répétition de code car cela freine
 ## D'autres lettres à utilisées
 
 par convention on utilise souvent **K, T, U et V**.
+
+## LES EXCEPTIONS
+
+Java possède un mécanisme pour gérer les erreurs. Une erreur est un problème que le code rencontre, c’est que nous appelons une exception.
+
+Par exemple, vous déclarez une variable typée par la classe Bloc mais vous ne l’initialisez pas. Puis vous appelez le getter de l’attribut longueur. Que se passe-t-il ?
+
+Bien qu’il n’y ait aucune faute de syntaxe empêchant la compilation, à l’exécution ce code ne va pas fonctionner.
+
+En effet, il lui sera impossible d’exécuter une méthode sur une variable qui vaut null.
+
+Ainsi s’il est vrai que l’étape de compilation nous protège de nombreux problèmes, c’est bien le mécanisme de gestion des exceptions qui va rendre stable notre application à l’exécution. L’objectif est d’anticiper ces potentiels problèmes et de prévoir un traitement adapté. L’expérience utilisateur sera ainsi préservée.
+
+<img src="schemaRecapitulatif.png">
